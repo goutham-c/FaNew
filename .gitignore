@@ -1,0 +1,106 @@
+# ==============================================================================
+# Model Artifacts, Checkpoints & Training Outputs
+# ==============================================================================
+# Intermediate training checkpoints (can be multiple GBs of optimizer states & weights)
+checkpoint-*/
+**/checkpoint-*/
+training_args.bin
+
+# Large model weights and binary formats (>100MB exceeds GitHub's file size limit)
+# Note: If tracking trained weights via Git LFS or Hugging Face Hub, configure
+# .gitattributes accordingly or un-ignore specific model files.
+*.safetensors
+*.bin
+*.pt
+*.pth
+*.onnx
+*.ckpt
+*.h5
+
+# Optionally ignore the entire model directory if you re-train or download on deploy:
+# model/
+
+# ==============================================================================
+# Training Logs & Experiment Tracking
+# ==============================================================================
+logs/
+*.log
+runs/
+wandb/
+.tensorboard/
+
+# ==============================================================================
+# Hugging Face & Dataset Caches
+# ==============================================================================
+.cache/
+hf_cache/
+datasets_cache/
+
+# ==============================================================================
+# Gradio Web Demo Artifacts
+# ==============================================================================
+flagged/
+gradio_cached_examples/
+
+# ==============================================================================
+# Python Bytecode & Cache
+# ==============================================================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# ==============================================================================
+# Virtual Environments
+# ==============================================================================
+.venv/
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# ==============================================================================
+# Environment Variables & Secrets
+# ==============================================================================
+.env
+.env.*
+!.env.example
+secrets.json
+
+# ==============================================================================
+# Operating System & IDE Files
+# ==============================================================================
+# OS generated
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+
+# Editors & IDEs
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# ==============================================================================
+# Jupyter Notebooks & Testing / Coverage
+# ==============================================================================
+.ipynb_checkpoints/
+.pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+
+# ==============================================================================
+# Distribution & Build
+# ==============================================================================
+build/
+dist/
+*.egg-info/
+.eggs/
